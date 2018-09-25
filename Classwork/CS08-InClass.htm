@@ -1,0 +1,68 @@
+<head>
+<style type="text/CSS">
+    h1{
+        text-align:center; 
+        color:navy;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    }
+    p{
+        color:navy;
+    }
+    form{
+        background-color:silver;
+        margin-left:100px;
+        margin-right:100px;
+        margin-top:50px;
+        margin-bottom:50px;
+        padding: left 100px, right 50px, top 20px, bottom 20px;
+    }
+    body{
+        background-color:white
+    }
+    </style>    
+</head>
+
+<body>
+
+ <h1>Web Forms-CS08-InClass</h1>   
+
+ <form method="form post" action="mailto:ishepardson1@babson.edu">
+    <p>Last Name: <input type="text" name="last name">
+        First Name: <input type="text" name="first name"></p>
+
+    <p>Gender: Male<input type="radio" name="male" value="m">
+                Female<input type="radio" name="female" value="f"></p>
+
+    <p>My Favorite WebTech Topics Are<br>
+        <input type="checkbox" name="topic-question" value="1">Basic HTML<br>
+        <input type="checkbox" name="topic-question" value="2">CSS<br>
+        <input type="checkbox" name="topic-question" value="3">Tables<br>   
+        <input type="checkbox" name="topic-question" value="4">FORMS<br>   
+    </p>
+
+    <p><input type="submit" name="Submit" value="Submit">
+    <input type="reset" name= "Reset" value="Reset"></p>
+
+    <p>What grade do you expect to receive?
+        <select name="grade">
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+            <option value="D">D</option>
+            <option value="F">F</option>
+        </select>
+    </p>
+
+    <p>
+        Please add any comments you may have</p>
+      <p>  <textarea name="comments" rows="5" columns="50"></textarea></p>
+    
+    <p><button type="submit" name="submit" value="submit">
+        SUBMIT <img src="images/mailbox.png" height="30" alt="submit_button"/>
+    </button>
+        <button type="clear" name="clear" value="clear">
+            CLEAR <img src="images/reset.png" height="30" alt="clear_button"/>
+        </button>
+</p>
+</form>
+</body>
