@@ -1,0 +1,121 @@
+<header>
+    <style type="text/CSS">
+    
+    body{
+        background-color:black;
+        background-image:url("beaver.jpg");
+        background-attachment: fixed;
+        background-position: 3px 375pt; 
+        background-repeat:repeat-x
+    }
+h1{
+    text-align:center;
+    color:white;
+    font-size:3em;
+}
+
+table{
+    background-color:silver;
+    width: 60%;
+    height:40%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top:0px;
+    margin-bottom:100px;
+    border: 3px solid black;
+}
+
+td{
+    border: 1px solid black;
+    vertical-align: middle;
+    text-align:left;
+
+}
+
+tr{
+    border: 1px solid black;
+    vertical-align: middle; 
+}
+
+th{
+    border: 1px solid black;
+    vertical-align: middle; 
+}
+
+img{
+    width:35%;
+}
+#caption{
+    background-color:white;
+    text-align:center;
+}
+textarea{
+    background-color:yellow;
+    text-align:left;
+    margin-bottom:2px;
+}
+.centered{
+    text-align:center;
+}
+#bigbox{
+    width: 100%;
+    height:75pt;
+}
+.sequential{
+    width:20%
+}
+#oops{
+    background-color:red
+}
+
+        </style>
+</header>
+
+<body>
+    <h1>Soap Survey</h1>
+<form method="form post" action="mailto:ishepardson1@babson.edu">
+<table>
+    <tr><th>Soap Image</th><th>Soap Color<br> Preference</th><th>Soap Purchase<br> Intent</th><th>Soap Features Linked</th></tr>
+    <tr><td class="centered"><img src="soap-2.jpg"></td>
+        <td class="sequential"><input type="radio" name="green" value="g">Green<br><input type="radio" name="gold" value="g">Gold (shown)<br><input type="radio" name="red" value="r">Red</td>
+        <td class="centered"><br>At $5.00/unit
+                <p><select name="likeliness">
+                        <option value="Defintiely Buy">Definitely Buy</option>
+                        <option value="Likely Buy">Likely Buy</option>
+                        <option value="Undecided">Undecided</option>
+                        <option value="Unlikely Buy">Unlikely Buy</option>
+                        <option value="Not Buy">Not Buy</option>
+                    </select></p></td>
+        <td><input type="checkbox" name="topic-question" value="1">Shape<br>
+            <input type="checkbox" name="topic-question" value="2">Size<br>
+            <input type="checkbox" name="topic-question" value="3">Smell<br>   
+            <input type="checkbox" name="topic-question" value="4">Texture<br> </td></tr>
+            <tr><td class="centered"><img src="soap-1.jpg"></td>
+                <td class="sequential"><input type="radio" name="ivory" value="g">Ivory<br><input type="radio" name="sandal" value="g">Sandal Wood (shown)<br><input type="radio" name="pink" value="r">Pink</td>
+                <td class="centered"><br>At $8.00/unit
+                        <p><select name="likeliness">
+                                <option value="5">Definitely Buy</option>
+                                <option value="4">Likely Buy</option>
+                                <option value="3">Undecided</option>
+                                <option value="2">Unlikely Buy</option>
+                                <option value="1">Not Buy</option>
+                            </select></p></td>
+                <td><input type="checkbox" name="topic-question" value="1">Shape<br>
+                    <input type="checkbox" name="topic-question" value="2">Size<br>
+                    <input type="checkbox" name="topic-question" value="3">Smell<br>   
+                    <input type="checkbox" name="topic-question" value="4">Texture<br> </td></tr>
+            <tr><td colspan="4" id="caption">Tell us about yourself....</td></tr>
+            <tr><td>Gender
+                    <select name="Gender">
+                            <option value="0">Male</option>
+                            <option value="1">Female</option></td>
+                    <td colspan="3">Age: (under 25 enter 1, 25-40 enter 2, else enter 3) <textarea name="comments" maxlength="3" cols="5" rows="1"></textarea>
+                    </td></tr>
+            <tr>
+                <td colspan="2">Your comments are welcome:<br><textarea name="comments" id="bigbox"></textarea></td>
+                <td colspan="2" class="centered"><input type="submit" name="sumbit" value="Done">
+                    <input type="reset" name= "Oops" value="Oops" id="oops"></td>
+            </tr>
+</table>
+</form>
+</body>
