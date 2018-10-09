@@ -1,0 +1,76 @@
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>CS11 - Intro to JavaScript</title>
+
+        <style type="text/css">
+            /* h1 {
+                font-weight: bold;
+                background-color: Silver;
+            }
+            p {
+                text-align: center;
+            } */
+        </style>
+
+        <script type="text/javascript">
+            /* Your JavaScript goes here */
+            function change_BackgroundColor() {
+                const bgColors = new Array("green", "yellow", "blue", "pink", "red", "orange");
+                let n = bgColors.length;
+                let randIndex = Math.floor(Math.random() * n);
+               // let b = document.getElementById("bodyA");
+                //b.style.backgroundColor = bgColors[randIndex];
+
+               let h = document.getElementById("H1A");
+                h.style.backgroundColor = bgColors[randIndex];
+
+            }
+            function enlarge_Img() {
+                let myimg = document.getElementById("imgB");
+                let w = myimg.style.width;
+                w = parseInt(w);
+                w = w + 30;
+                myimg.style.width = w + "px";
+            }
+            function c() {
+                let x = 2018;
+                let y = 10;
+
+                x = x + y;
+                result = x;
+
+                let d = Date();
+                alert("The result is " + result + ". What is date?" + d) ;
+
+            let H1A = document.getElementById("H1A");
+            H1A.innerHTML = d;
+            }
+            
+        </script>
+    </head>
+
+    <body id="bodyA">
+        <hr />
+        <h1 id="H1A" onclick="change_BackgroundColor()"> Don't Look - I am Changing</h1>
+        <hr />
+        <img id="imgB" src="images/man.png" alt="man" style="width:30px" onmouseover="enlarge_Img()" />
+        <p>
+            <button onclick="c()">I dare you to click on me!</button>
+        </p>
+        <hr />
+        <p id="newP" onclick="capitalize()">
+            test the new paragraph.
+            </p>
+        
+            <script type="text/javascript">
+            function capitalize()  {
+                let x = document.getElementById("newP");
+                x.style.textTransform="uppercase";
+            }
+            </script>
+
+    </body>
+
+</html>
