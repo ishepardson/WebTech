@@ -39,13 +39,13 @@
 
         <script type="text/javascript">
             function change(circle) {
-                if(circle = "green-circle"){
+                if(circle == "green-circle"){
                     document.getElementById("header2").innerHTML = "You just clicked the green circle";
                     document.getElementById("green-circle").style.backgroundColor = "DarkGreen";
-                    document.getElementById("blue-circle").style.backgorundColor = "LightBlue";
+                    document.getElementById("blue-circle").style.backgroundColor = "LightBlue";
                     document.getElementById("red-circle").style.display = "block";
                 }
-                else if (circle = "blue-circle"){
+                else if (circle == "blue-circle"){
                     document.getElementById("header2").innerHTML = "You just clicked the blue circle";
                     document.getElementById("green-circle").style.backgroundColor = "LightGreen";
                     document.getElementById("blue-circle").style.backgroundColor = "DarkBlue";
@@ -54,7 +54,7 @@
                 else {
                     document.getElementById("header2").innerHTML = "You just clicked the red circle";
                     document.getElementById("red-circle").style.display = "none";
-                    document.getElementById("blue-cirlce").style.backgroundColor = "Blue";
+                    document.getElementById("blue-circle").style.backgroundColor = "Blue";
                     document.getElementById("green-circle").style.backgroundColor = "Green";
                 }
             }
