@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Homework 3</title>
+        <style type="text/css">
+            h1 {
+                text-align: center;
+                font-family: Arial;
+                color: Navy;
+            }
+            img {
+                border: 6px solid navy;
+                margin-bottom: 100px;
+            }
+            p.cent {
+                text-align: center;
+            }
+            ul,
+            p#inst {
+                margin-right: 200px;
+                margin-left: 200px;
+                font-family: Cursive;
+                font-size: 1em;
+            }
+            li {
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+            button {
+                margin-right: 20px;
+                background-color: White;
+                height: 50px;
+                width: 140px
+            }
+            
+        </style>
+
+        <script type="text/javascript">
+            function showImg(x){
+
+                if(x == "gs") {
+                    var obj=document.getElementById('img1');
+                    obj.src = "shepherd.jpg";
+                    obj.alt = "Good Shepherd";
+                    obj.title = "German Shepherd";
+                    obj.style.borderColor="yellow";
+                    document.getElementById("myhead").innerHTML = "German Shepherd";
+                    document.getElementById('gs').style.backgroundColor = "silver";
+                    document.getElementById('pg').style.backgroundColor = "white";
+                    document.getElementById('lp').style.backgroundColor = "white";
+                    document.getElementById('lx').style.backgroundColor = "white";
+
+                }
+
+                else if(x == "pg") {
+                    var obj=document.getElementById('img1');
+                    obj.src = "penguin.jpg";
+                    obj.alt = "Good Penguin";
+                    obj.title = "Penguin";
+                    obj.style.borderColor="red";
+                    document.getElementById("myhead").innerHTML = "Penguin";
+                    document.getElementById('pg').style.backgroundColor = "silver";
+                    document.getElementById('gs').style.backgroundColor = "white";
+                    document.getElementById('lp').style.backgroundColor = "white";
+                    document.getElementById('lx').style.backgroundColor = "white";
+                }
+
+                else if(x == "lp") {
+                    var obj=document.getElementById('img1');
+                    obj.src = "snowleopard.jpg";
+                    obj.alt = "Snow Leopard";
+                    obj.title = "Snow Leopard";
+                    obj.style.borderColor="green";
+                    document.getElementById("myhead").innerHTML = "Snow Leopard";
+                    document.getElementById('lp').style.backgroundColor = "silver";
+                    document.getElementById('pg').style.backgroundColor = "white";
+                    document.getElementById('gs').style.backgroundColor = "white";
+                    document.getElementById('lx').style.backgroundColor = "white";
+                }
+
+                else if(x == "lx") {
+                    var obj=document.getElementById('img1');
+                    obj.src = "lynx.jpg";
+                    obj.alt = "Lynx";
+                    obj.title = "Lynx";
+                    obj.style.borderColor="lime";
+                    document.getElementById("myhead").innerHTML = "Lynx";
+                    document.getElementById('lx').style.backgroundColor = "silver";
+                    document.getElementById('pg').style.backgroundColor = "white";
+                    document.getElementById('lp').style.backgroundColor = "white";
+                    document.getElementById('gs').style.backgroundColor = "white";
+                }
+            }
+            function imageEnlarge() {
+                let i = document.getElementById("img1");
+                let w = i.width;
+                i.width = w * (1 + .75);
+}
+
+            function imageReset()   { 
+                let i = document.getElementById("img1");
+                let w = i.width;
+                i.width = w / (1 + .75);
+}
+        </script>
+
+    </head>
+
+    <body>
+        <h1 id="myhead"> The Animal Name Goes Here</h1>
+        <p class="cent">
+            <img id="img1" src="" alt="Image goes here" title="" 
+            onmouseover="imageEnlarge();" onmouseout="imageReset()"/>
+           
+        </p>
+        <p class="cent">
+            <button onclick="showImg(this.id)" id="gs" value="shepherd">German Shepherd</button>
+            <button onclick="showImg(this.id)" id="pg" value="penguin">Penguin</button>
+            <button onclick="showImg(this.id)" id="lp" value="leopard">Snow Leopard</button>
+            <button onclick="showImg(this.id)" id="lx" value="lynx">Lynx</button>
+        </p>
+        <p id="inst">The homework is graded out of 25 points. Please create the functionality, using JavaScript, to do the following:</p>
+        <ul>
+            <li> Display the image of the animal corresponding to the button the user clicks on. The place-holder for the image
+                is provided to you. (8 points).</li>
+            <li> Change the color of the image border based on the animal displayed. Yellow for German Shepherd, Red for Penguin,Green
+                for Snow Leopard and, Lime for Lynx. If my color choices are poor, you can pick your own colors as long as
+                it is different and unique for each animal image.(4 points)</li>
+            <li> Change the heading, "The Animal Name Goes Here" to the type of animal shown. (3 points)</li>
+            <li> Change the background color of the button that the user clicks on to Silver. Only the button the user has clicked
+                on must be Silver. All others must be White.(5 points)</li>
+            <li>Write another function to enlarge the image by 75% when the user mouses-over it and return it to normal size
+                when the user mouses-out of the image.</li>
+            <li> Please use a single function for all of the above functionality (5 points). If you cannot, please use as many
+                functions as needed (0 points)</li>
+        </ul>
+
+        
+
+    </body>
+
+</html>
