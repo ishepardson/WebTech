@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>CS15-Processing Form Inputs</title>
+        <style type="text/css">
+            form {
+                margin-left: 200px;
+                margin-right: 200px;
+                padding: 30px;
+                font-family: Arial;
+                font-weight: bold;
+                background-color: Silver;
+            }
+            h1 {
+                text-align: center;
+                font-family: Arial;
+            }
+        </style>
+
+        <script type = "text/javascript">
+             function display(){
+                 let myForm = document.getElementById("form1");
+                 let fullName = myForm.fullName.value;
+                 let age = myForm.age.value;
+                 let gender = myForm.gender.value;
+
+                 if((fullName.length == 0) || (age.length == 0)){
+                     alert("You did not finish the form yet!")
+                 }
+                 else if(isNaN(age)){
+                     alert("You did not enter a valid age.")
+                 }
+                 else{
+                     let message;
+                     if(myForm.noAge.checked){
+                         message = "Name: " + fullName + "\nGender " + gender;
+                     }
+                    else{ let message = "Name: " + fullName + "\nAge: " + age + "\nGender: " + gender;
+                    }
+                     myForm.result.value = message;
+                 }
+                 return false;
+             
+            }
+        </script>
+
+    </head>
+
+    <body>
+        <!-- Your HTML goes here -->
+
+        <h1>Processing form inputs</h1>
+        <form action="" method="post" id="form1">
+            <p>
+                Enter your name: <input type="text" name="name" size="40" id="fullName" /> 
+                Enter your age : <input type="text" name="age" size="4" id="age"/>
+            </p>
+            <p>
+                Select your gender:
+                <select name="gender" id="gender">
+                    <option value="Female"> Female </option>
+                    <option value="Male"> Male </option>
+                </select>
+            </p>
+            <p>
+                Your selections will appear here: <br />
+                <textarea name="result" id="result" cols="40" rows="3"></textarea>
+            </p>
+            <p>
+                <input type="submit" onclick="return display()" name="submit" value="Show Me" style="width:100px;height:40px" />
+                <input type="reset" name="reset" value="Clear Me" style="width:100px;height:40px" />
+
+            </p>
+
+            
+            I do not want to reveal my age: <input type="checkbox" name="noAge">
+            <p id="text" style="display:none">Checkbox is CHECKED!</p>
+
+        </form>
+
+    </body>
+
+</html>
