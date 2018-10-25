@@ -28,22 +28,27 @@
         <script type="text/javascript">
         function display(){
             let myForm = document.getElementById("form2");
-            let cel = myForm.cel.value;
-            let far = myForm.far.value;
-            cel = parseFloat(cel);
-            far = parseFloat(far);
+            celsius = document.getElementById("cel").value;
+            fahr = document.getElementById("far").value;
+            cel = parseFloat(celsius);
+            far = parseFloat(fahr);
 
-            if ((cel.length == 0) && (far.length == "")){
+            if ((!cel) && (!far)) {
                 alert ("You must enter a value");}
             else if ((isNaN(cel)) && (isNaN(far))){
                 alert("You did not enter a valid number.");}
             else{
-                if ((cel.length == "") && (far.length == 0)){
-                    far = cel*(9/5)+32;
-                    
+                if (fahr && !cel){
+                    cel = ((far-32)*(5/9));
+                    celValue = document.getElementById("cel");
+                    celValue.value = cel;
                 }
-                else if ((far.length == "") && (cel.length == 0)){
-                    cel = (far - 32) * (5/9);
+                    
+                
+                else if (celsius && !far){
+                    far = ((cel*(9/5)+32));
+                    farValue = document.getElementById("far");
+                    farValue.value = far;
                     
                 }
 
@@ -61,7 +66,7 @@
         <h1> Celsius Fahrenheit Converter</h1>
         <form action="" method="post" id="form2">
             <p id="p1">
-                Celsius: <input type="text" name="cel" size="10" /> Fahrenheit: <input type="text" name="far" size="10" />
+                Celsius: <input type="text" name="cel" size="10" id="cel" /> Fahrenheit: <input type="text" name="far" size="10" id="far" />
             </p>
 
             <p style="margin-left:100px">
