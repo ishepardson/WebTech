@@ -1,0 +1,48 @@
+<html>
+    <header>
+        <title>Slide Show</title>
+        <style type ="text/css">
+            p {
+                text-align: center;
+            }
+            img{
+                border:10px solid;
+                
+            }
+        </style>
+        <script type="text/javascript">
+            var slides = new Array("images/tiger1.jpg", "images/tiger2.jpg", "images/tiger3.jpg",
+             "images/tiger4.jpg");
+             var bc = new Array("Blue", "Green", "Red", "Yellow");
+             var ds = new Array("Nice Tiger","Great Tiger", "Beautiful Tiger", "Super Tiger");
+             var i = 0;
+             var count = 1;
+             function slideShow() {
+                 let img = document.getElementById("tigerImage");
+                 let desc = document.getElementById("desc");
+                 let counter = document.getElementById("counter");
+                 if (i == slides.length){
+                     i=0;
+                 } 
+                 img.src = slides[i];
+                 img.style.borderColor = bc[i];
+                 desc.innerHTML = ds[i];
+                 counter.innerHTML = count;
+                 local.innerHTML = i;
+                 i++;
+                 count++;
+                 setTimeout("slideShow()", 1000);
+             }
+             
+        </script>
+    </header>
+
+    <body onload="slideShow()">
+        <p>
+            <img src="images/tiger1.jpg" id="tigerImage" alt="Slideshow of Tigers" title="Tigers">
+        </p>
+        <p id="desc"></p>
+        <p>The slideShow function has now been ran <span id="counter"></span> times.
+        The local counter is <span id="local"></span></p>
+    </body>
+</html>
