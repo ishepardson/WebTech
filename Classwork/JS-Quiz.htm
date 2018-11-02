@@ -23,18 +23,19 @@
             }
         </style>
         <script type="text/javascript">
-            let sum = 0;
-            let f=document.getElementById("f").value;
-            let t=document.getElementById("t").value;
-            let f = f^2;
-            let t = t^2;
-            f = parseFloat("f");
-            t = parseFloat("t");
-            let result = document.getElementById("result").value;
-            for(let i = 0; i <= t; i++) {
-                result = sum + i;
+        function sum() {
+            let form = document.getElementById("myform");
+            let first = parseInt(form.from.value);
+            let second = parseInt(form.to.value);
+            
+            alert(first, second)
+            let result = 0;
+            for (let i=first; i<=second; i++) {
+                result +=  i*i;
             }
-            return choose();
+            document.getElementById("result").innerHTML = result;
+            return false;
+        }
         </script>
     </head>
 
@@ -42,12 +43,12 @@
         <h1> Another Simple Calculator</h1>
         <p> Please use <b>for</b> loop to sum up <strong>squares</strong> of all the integers between these two
             numbers (inclusive). </p>
-        <form action="" method="post">
+        <form action="" method="post" id="myform">
             <p id="p1">
-                From: <input type="text" name="from" size="10" id="f" /> To: <input type="text" name="to" size="10" id="t" />
+                From: <input type="text" name="from" size="10" /> To: <input type="text" name="to" size="10" />
             </p>
             <p>
-                <input onclick="return choose()" type="submit" name="Sum" value="Sum" />
+                <input onclick="return sum()" type="submit" name="Sum" value="Sum" />
                 <input type="reset" name="reset" value="Clear" />
             </p>
 
