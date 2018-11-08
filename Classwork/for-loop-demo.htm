@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <script type="text/javascript">
+            //solution1
+            // for (let i = 0); i <= 10; i = i + 2){
+                //result += i;
+            //}
+
+            //solution2
+            for (let i = 0; i < 6; i++) {
+                result += i * 2;
+                alert("after adding " + i * 2 + " result becomes " + result)
+           }
+
+           //solution3
+           /*for (let i = 0; i <= 10; i++) {
+               if (i % 2 == 0) {
+                   result +=i;
+               }
+           }*/
+           document.getElementById("result")
+           .innerHTML = result;
+        </script>
+    </head>
+
+    <body>
+        <button></button>
+    </body>
+</html>

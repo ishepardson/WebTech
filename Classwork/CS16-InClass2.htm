@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>CS16-InClass2 - Windows and Drop down lists</title>
+        <script type="text/javascript">
+            function openWindow() {
+                let myform = document.getElementById("form1");
+                if (myform.animal.value == "null") {
+                    alert("Pick a value from the drop down list");
+                }
+                else if (myform.animal.value == "wolf") {
+                    window.open('http://en.wikipedia.org/wiki/Gray_wolf', 'mywin', 'width=800, height=500');
+                }
+                else {
+                    window.open('lynx.htm', 'mywin', 'width=400, height=400, top=200, left=600');
+                }
+            }
+        </script>
+    </head>
+
+    <body>
+        <h1> Illustrating Open Windows</h1>
+        <form method="post" id="form1">
+            <select onchange="openWindow()" name="animal">
+                <option value="null">Please select a value</option>
+                <option value="wolf">Wolf</option>
+                <option value="lynx">Lynx</option>
+            </select>
+        </form>
+    </body>
+
+</html>

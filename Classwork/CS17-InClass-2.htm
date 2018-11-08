@@ -24,7 +24,8 @@
             var msgList = new Array("Hey Jude, don't make it bad", "Take a sad song, and make it better",
             "remember to let her into your heart", "Then you can start to make it better");
             function doScroll() {
-                document.getElementById("msg");
+                // alert(p);
+                x = document.getElementById("msg");
                 x.innerHTML = msgList[k];
                 x.style.left = p + "px";
                 if (p > 700){
@@ -37,13 +38,15 @@
                 }
                 else {
                     p = p + 1;
+                    // alert("here");
                 }
-                setTimout("doScroll()", 5);
+                setTimeout("doScroll()", 5);
+                
             }
         </script>
     </head>
 
-    <body onload="doScroll(), 5">
+    <body onload="doScroll()">
         <h1>Moving Text</h1>
         <div>
             <h2 id="msg"></h2>
