@@ -42,35 +42,61 @@
         background-color:black;
         color:red;
     }
-    div{
+    span{
         color:yellow
     }
+    .flag{
+        border:1px solid white;
+        width:70px;
+        height:40px;
+        vertical-align: center;
+    }
+
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+    }
+body{
+    background-color: lightblue;
+}
+div img{
+    width:250px;
+}
 
 </style>
+<script type="text/javascript">
+    /*var slides=new Array("images/barfieldtrip.jpg", "images/berlinart.jpg", "images/graffiti.jpg", "wall.jpg");
+    var ds=new Array("Music Field Trip", "Berlin Street Art Museum", "Berlin Graffiti", "Remains of the Berlin Wall")
+    var i=0;
+    function slideShow(){
+        let img=document.getElementById("berlinPics");
+        let desc=document.getElementById("desc");
+        if (i==slides.length){
+            i=0;
+        }
+    img.src=slides[i];
+    desc.innerHTML = ds[i];
+    i++;
+    setTimeout("slideShow", 1000)
+    }*/
+    
+</script>
 
 </head>
 
-<body>
-    <h1>Berlin, <div>Germany</div></h1>
+<body onload="slideShow()">
+    <h1> <img class="flag" src="images/German flag.png"> Berlin, <span>Germany</span> <img class="flag" src="images/German flag.png"></h1>
     <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="berlinculture.html">Berlin Culture</a></li>
         <li><a href="travels.html">My Travels</a></li>
         <li><a href="takeaways.html">Key Takeaways</a></li>
         <li><a href="contact.html">Contact</a></li>
+        <li><a href="credits.html">Credits</a></li>
     </ul>
-    <h2>Map of Important Locations</h2>
-    <map name="Berlin">
-            <area shape="rect", coords="235,285,265,315"
-            href="https://www.visitberlin.de/en/districts/tempelhof-schoneberg"  alt="Tempelhof"  title="Tempelhof-My Neighborhood" target="_blank"/>
-        
-            <area shape="rect", coords="240,180,270,210"
-            href="https://www.iesabroad.org/city/berlin"  alt="IES"  title="IES Abroad Center"  target="_blank"/>
 
-            <img src="images/berlin.jpg" id="map" usemap="#Berlin" alt="Map of Berlin" title="Clickable Map"/>
-            </map>
-
-    <h3>Tempelhof</h3>
+    <h2>Tempelhof</h2>
     <p>
         During my semester abroad, I lived in Tempelhof, a neighborhood in Berlin. I lived across
         from the decommissioned Tempelhof Airport with my host mother Elke. I decided to do a homestay
@@ -81,7 +107,7 @@
         information and adapt a new way of thinking. Now I approach many things in life with a more open
         mind and I now want to learn so much more about the many other cultures across the globe.
     </p>
-    <h3>IES Abroad</h3>
+    <h2>IES Abroad</h2>
     <p>
         I studied in Berlin through the IES Abroad program. The IES center was located in the neighborhood
         Mitte in the center of Berlin. There I took 5 different classes: German language, Metropolitan
@@ -94,19 +120,33 @@
         On top of this, I recognized that much of IES' curriculum was taught out in the field as each 
         course I took utilized field trips as a way to learn experientially. If you're interested in
         checking out IES' website, feel free to click on the link to check their <a href="https://www.iesabroad.org/">site</a>.
-        <br>Check out some of my pictures below to see where I went for field trips.
+        <br>Check out the map below and some of my pictures as well to see where I lived and studied and where
+        I went for field trips.
         </p>
-        <p><img src="images/bar field trip.jpg" alt="band" title="Rock Band"></a>
-        <br>Punk Rock Band at a Bar</p>
-        <p> <img src="images/berlin art.jpg" alt="art" title="Street Art"></a>
-        <br>Street Art Museum</p>
-        <p><img src="images/graffiti.jpg" alt="graffiti" title="Graffiti"></a>
-        <br>Graffiti</p>
-        <p><img src="images/wall.jpg" alt="wall" title="Berlin Wall"></a>
-        <br>Berlin Wall</p>
+        
+    <h3>Map of Important Locations</h3>
+        <map name="Berlin">
+                <area shape="rect", coords="235,285,275,325"
+                href="https://www.visitberlin.de/en/districts/tempelhof-schoneberg"  alt="Tempelhof"  title="Tempelhof-My Neighborhood" target="_blank"/>
+            
+                <area shape="rect", coords="240,180,290,230"
+                href="https://www.iesabroad.org/city/berlin"  alt="IES"  title="IES Abroad Center"  target="_blank"/>
+    
+                <img src="images/berlin.jpg" id="map" usemap="#Berlin" alt="Map of Berlin" title="Clickable Map"/>
+                </map>
+        <h3>Picture Gallery</h3>
+        <!--<p><img id="berlinPics" src="images/barfieldtrip.jpg" alt="Slideshow of Berlin" title="Berlin"></p>
+        <p id="desc"></p>-->
+        <div id="gallery">
+                <img src="images/barfieldtrip.jpg" title="Music Field Trip">
+                <img src="images/berlinart.jpg" title="Berlin Street Art Museum">
+                <img src="images/graffiti.jpg" title="Graffiti">
+                <img src="images/wall.jpg" title="The Berlin Wall">
+            </div>
+          
 
 
-    <audio controls autoplay>
+        <audio controls autoplay>
         <source src="heroes.mp3" type="audio/mp3">
     </audio><br>
     <a href="sitemap.html">Site Map</a>

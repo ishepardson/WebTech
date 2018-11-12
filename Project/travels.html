@@ -43,17 +43,30 @@
     #prayer{
         text-align: center;
     }
+    span{
+        color:yellow;
+    }
+    .flag{
+        border:1px solid white;
+        width:70px;
+        height:40px;
+        vertical-align: center;
+    }
+    body{
+        background-color: lightblue;
+    }
 </style>
 </head>
 
 <body>
-        <h1>My Travels</h1>
+        <h1> <img class="flag" src="images/czech flag.png"> My <span>Travels</span> <img class="flag" src="images/macedonia flag.png"></h1>
     <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="berlinculture.html">Berlin Culture</a></li>
         <li><a href="travels.html">My Travels</a></li>
         <li><a href="takeaways.html">Key Takeaways</a></li>
         <li><a href="contact.html">Contact</a></li>
+        <li><a href="credits.html">Credits</a></li>
     </ul>
 
     <table>
@@ -96,7 +109,9 @@
             <td>
                 <img src="images/macedonia.jpg" alt="macedonia" title="Macedonia">
                 <img src="images/castle.jpg" alt="castle" title="Skopje Castle"><br>
-                <img src="images/macedonia mosque.jpg" alt="mosque" title="Mosque in Skopje">
+                <video width="250" height="300" controls>
+                    <source src="PrayerCalls.mp4">
+                </video>
             </td>
             <td>
                 <img src="images/paris graffiti.jpg" alt="graffiti" title="Paris Graffiti">
@@ -104,9 +119,6 @@
                 <img src="images/eiffel tower.jpg" alt="eiffel tower" title="Eiffel Tower">
             </td>
         </tr>
-        <tr><td colspan="3" id="prayer"><video width="300" height="400" controls>
-                <source src="PrayerCalls.mp4">
-            </video></td></tr>
     </table><br>
     <a href="sitemap.html">Site Map</a>
 </body>

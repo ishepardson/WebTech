@@ -33,27 +33,50 @@
         background-color:black;
         color:red;
     }
+    span{
+        color:blue;
+    }
+    .flag{
+        border:1px solid white;
+        width:70px;
+        height:40px;
+        vertical-align: center;
+    }
+    body{
+        background-color: lightblue;
+    }
+    h4{
+        text-align: left;
+        padding-left: 100px;
+    }
+    #name{
+        padding-left: 222px;
+    }
+    #contact{
+        padding-left: 177px;
+    }
 
 </style>
 </head>
 
 <body>
-        <h1>Contact</h1>
+        <h1><img class="flag" src="images/usa flag.png"> Contact <span>Me</span> <img class="flag" src="images/usa flag.png"></h1>
     <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="berlinculture.html">Berlin Culture</a></li>
         <li><a href="travels.html">My Travels</a></li>
         <li><a href="takeaways.html">Key Takeaways</a></li>
         <li><a href="contact.html">Contact</a></li>
+        <li><a href="credits.html">Credits</a></li>
     </ul>
 
     <form method="form post" action="mailto:ishepardson1@babson.edu">
-        <p>I want to hear from you. If you have any questions, feel free to send your message
+        <h3>I want to hear from you. If you have any questions, feel free to send your message
             and I will respond promptly.
-        </p><br>
-        Name:<textarea name="name" rows="1" cols="10"></textarea><br>
-        Contact Info:<textarea name="contact" rows="1" cols="10"></textarea><br>
-        Questions or Comments:<textarea name="comments" rows="5" cols="40"></textarea><br>
+        </h3><br>
+        <h4 id="name">Name: <textarea name="name" rows="1" cols="15"></textarea></h4>
+        <h4 id="contact">Contact Info: <textarea name="contact" rows="1" cols="15"></textarea></h4>
+        <h4>Questions or Comments: <textarea name="comments" rows="5" cols="40"></textarea></h4>
         <input type="submit" name="sumbit" value="Done">
                     <input type="reset" name= "Reset" value="Reset" id="reset">
     </form><br>
