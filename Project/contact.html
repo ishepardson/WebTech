@@ -32,6 +32,8 @@
         text-align:center;
         background-color:black;
         color:red;
+        margin-top:0;
+        margin-bottom:0;
     }
     span{
         color:blue;
@@ -44,6 +46,7 @@
     }
     body{
         background-color: lightblue;
+        margin:0;
     }
     h4{
         text-align: left;
@@ -55,8 +58,42 @@
     #contact{
         padding-left: 177px;
     }
+    div.body{
+        margin:15px;
+    }
+.important {
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.green {
+    color:navy;
+}
 
 </style>
+
+<script type="text/javascript">
+    function validateForm(){
+        let x = document.getElementById("Name").value;
+        let y = document.getElementById("Contact").value;
+        let z = document.getElementById("Comments").value;
+        if (x=="" || y=="" || z==""){
+            alert("You must enter a value for all text areas")
+        }
+        else{
+            alert("Thank you! I will respond ASAP.");
+        document.getElementById("h3").innerHTML = "I hope you enjoyed the site! Leave more comments if you have any travel suggestions or if you just want to chat!"
+        }
+        return validateForm;
+    }
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+        $(document).ready(function(){
+                $("h3").addClass("green");
+                $("#head").addClass("important");
+            });
+        </script>
 </head>
 
 <body>
@@ -70,15 +107,16 @@
         <li><a href="credits.html">Credits</a></li>
     </ul>
 
-    <form method="form post" action="mailto:ishepardson1@babson.edu">
-        <h3>I want to hear from you. If you have any questions, feel free to send your message
+    <div class="body">
+    <form method="form post" action="mailto:ishepardson1@babson.edu" name="myForm" onsubmit="return validateForm()">
+        <div id="head"><h3 id="h3">I want to hear from you. If you have any questions, feel free to send your message
             and I will respond promptly.
-        </h3><br>
-        <h4 id="name">Name: <textarea name="name" rows="1" cols="15"></textarea></h4>
-        <h4 id="contact">Contact Info: <textarea name="contact" rows="1" cols="15"></textarea></h4>
-        <h4>Questions or Comments: <textarea name="comments" rows="5" cols="40"></textarea></h4>
+        </h3></div><br>
+        <h4 id="name">Name: <textarea name="name" rows="1" cols="15" id="Name"></textarea></h4>
+        <h4 id="contact">Contact Info: <textarea name="contact" rows="1" cols="15" id="Contact"></textarea></h4>
+        <h4>Questions or Comments: <textarea name="comments" rows="5" cols="40" id="Comments"></textarea></h4>
         <input type="submit" name="sumbit" value="Done">
                     <input type="reset" name= "Reset" value="Reset" id="reset">
     </form><br>
-    <a href="sitemap.html">Site Map</a>
+    <a href="sitemap.html">Site Map</a></div>
 </body>

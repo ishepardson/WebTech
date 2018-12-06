@@ -31,6 +31,8 @@
         text-align:center;
         background-color:black;
         color:red;
+        margin-top:0;
+        margin-bottom:0;
     }
     img{
         width:45%;
@@ -54,8 +56,21 @@
     }
     body{
         background-color: lightblue;
+        margin:0;
+    }
+    div.body{
+        margin:15px;
     }
 </style>
+<script type="text/javascript">
+    function change(){
+        document.getElementById("pr").style.color = "blue";
+        document.getElementById("ma").style.color = "yellow";
+        document.getElementById("pa").style.color = "red";
+        document.getElementById("top").style.fontSize = "36px";
+
+    }
+</script>
 </head>
 
 <body>
@@ -69,8 +84,9 @@
         <li><a href="credits.html">Credits</a></li>
     </ul>
 
+    <div class="body">
     <table>
-        <tr><th>Prague</th><th>Macedonia</th><th>Paris</th></tr>
+        <tr id="top" onmouseover="change()"><th id="pr">Prague</th><th id="ma">Macedonia</th><th id="pa">Paris</th></tr>
         <tr>
             <td>Prague was an amazing city with a beautiful landscape and a fun social scene. Among
                 other things, I visited Prague's zoo which is ranked 5th best in the world by <a href="https://www.tripadvisor.com/TravelersChoice-Attractions-cZoos-g1">
@@ -120,5 +136,5 @@
             </td>
         </tr>
     </table><br>
-    <a href="sitemap.html">Site Map</a>
+    <a href="sitemap.html">Site Map</a></div>
 </body>

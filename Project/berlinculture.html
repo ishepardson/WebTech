@@ -32,6 +32,8 @@
         text-align:center;
         background-color:black;
         color:red;
+        margin-top:0;
+        margin-bottom:0;
     }
     span{
         color:yellow;
@@ -44,17 +46,34 @@
     }
     body{
         background-color: lightgoldenrodyellow;
+        margin:0;
     }
     div img{
         display:inline-block;
     }
-    img{
-        width:250px;
-    }
+
     #gallery{
         text-align: center;
     }
+    div.body{
+        margin:15px
+    }
 </style>
+
+<script type="text/javascript">
+    function enlarge(id){
+        let i = document.getElementById(id);
+        let w = i.width;
+        i.width = w * (1 + 0.5);
+        console.log(w);
+    }
+    function shrink(id){
+        let i = document.getElementById(id);
+        let w = i.width;
+        i.width = w / (1 + 0.5);
+    }
+
+</script>
 </head>
 
 <body>
@@ -68,6 +87,7 @@
         <li><a href="credits.html">Credits</a></li>
     </ul>
     <br>
+    <div class="body">
     <h2>People</h2>
     <p>Berlin is a very diverse city filled with people from all around the world who speak different languages,
         practice different religions and think very differently. Berlin's open border policy adds to this by
@@ -111,12 +131,13 @@
     </p>
     <h3>Image Gallery</h3>
     <div id="gallery">
-        <img src="images/hertha.jpg" title="BSC Hertha">
-        <img src="images/kissonthewall.jpg" title="Berlin Wall Kiss">
-        <img src="images/graffiti.jpg" title="Graffiti">
-        <img src="images/antiusa.jpg" title="Teufelsberg">
-        <img src="images/spraypaint.jpg" title="Graffiti in Progress">
-        <img src="images/xmasmarket.jpg" title="Christmas Market">
+        <img src="images/hertha.jpg" width="250px" title="BSC Hertha" onmouseover="enlarge('bsc')" onmouseout="shrink('bsc')" id="bsc">
+        <img src="images/kissonthewall.jpg" width="250px" title="Berlin Wall Kiss" onmouseover="enlarge('kiss')" onmouseout="shrink('kiss')" id="kiss">
+        <img src="images/graffiti.jpg" width="250px" title="Graffiti" onmouseover="enlarge('graffiti')" onmouseout="shrink('graffiti')" id="graffiti">
+        <img src="images/antiusa.jpg" width="250px" title="Teufelsberg" onmouseover="enlarge('antiusa')" onmouseout="shrink('antiusa')" id="antiusa">
+        <br>
+        <img src="images/spraypaint.jpg" width="250px" title="Graffiti in Progress" onmouseover="enlarge('spraypaint')" onmouseout="shrink('spraypaint')" id="spraypaint">
+        <img src="images/xmasmarket.jpg" width="250px" title="Christmas Market" onmouseover="enlarge('xmas')" onmouseout="shrink('xmas')" id="xmas">
     </div>
-    <a href="sitemap.html">Site Map</a>
+    <a href="sitemap.html">Site Map</a></div>
 </body>

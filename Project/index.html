@@ -29,18 +29,20 @@
     }   
 
     #map{
-        width:50%;
+        height:400px;
         text-align:center;
     }
 
     img{
-        width:25%
+        height: 400px;
     }
 
     h1{
         text-align:center;
         background-color:black;
         color:red;
+        margin-top: 0;
+        margin-bottom: 0;
     }
     span{
         color:yellow
@@ -51,35 +53,52 @@
         height:40px;
         vertical-align: center;
     }
+    .column{
+        float: left;
+        width: 40%;
+        padding: 5px;
+    }
+    .row::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
 
 
-div.desc {
-    padding: 15px;
+
+div#desc {
     text-align: center;
     }
 body{
     background-color: lightblue;
+    margin: 0;
 }
-div img{
-    width:250px;
+div.slides{
+    text-align: center;
+    padding-left: 180px;
+}
+div.body{
+    margin-left:15px;
+    margin-right:15px;
 }
 
 </style>
 <script type="text/javascript">
-    /*var slides=new Array("images/barfieldtrip.jpg", "images/berlinart.jpg", "images/graffiti.jpg", "wall.jpg");
+    var slides=new Array("images/barfieldtrip.jpg", "images/berlinart.jpg", "images/graffiti.jpg", "images/wall.jpg");
     var ds=new Array("Music Field Trip", "Berlin Street Art Museum", "Berlin Graffiti", "Remains of the Berlin Wall")
     var i=0;
     function slideShow(){
         let img=document.getElementById("berlinPics");
         let desc=document.getElementById("desc");
+        // alert( desc.innerHTML);
         if (i==slides.length){
             i=0;
         }
-    img.src=slides[i];
-    desc.innerHTML = ds[i];
-    i++;
-    setTimeout("slideShow", 1000)
-    }*/
+        img.src=slides[i];
+        desc.innerHTML = ds[i];
+        i++;
+        setTimeout(slideShow, 4000)
+    }
     
 </script>
 
@@ -96,6 +115,7 @@ div img{
         <li><a href="credits.html">Credits</a></li>
     </ul>
 
+<div class="body">
     <h2>Tempelhof</h2>
     <p>
         During my semester abroad, I lived in Tempelhof, a neighborhood in Berlin. I lived across
@@ -121,10 +141,14 @@ div img{
         course I took utilized field trips as a way to learn experientially. If you're interested in
         checking out IES' website, feel free to click on the link to check their <a href="https://www.iesabroad.org/">site</a>.
         <br>Check out the map below and some of my pictures as well to see where I lived and studied and where
-        I went for field trips.
+        I went for field trips. Also below is one of my favorite David Bowie songs who was adored by the people
+        of Berlin. He recorded multiple albums in Germany's capital city and this song, "Heroes", is off of one 
+        of these albums.
         </p>
         
-    <h3>Map of Important Locations</h3>
+    <div class="row">
+        <div class="column">
+        <h3>Map of Important Locations</h3>
         <map name="Berlin">
                 <area shape="rect", coords="235,285,275,325"
                 href="https://www.visitberlin.de/en/districts/tempelhof-schoneberg"  alt="Tempelhof"  title="Tempelhof-My Neighborhood" target="_blank"/>
@@ -133,22 +157,27 @@ div img{
                 href="https://www.iesabroad.org/city/berlin"  alt="IES"  title="IES Abroad Center"  target="_blank"/>
     
                 <img src="images/berlin.jpg" id="map" usemap="#Berlin" alt="Map of Berlin" title="Clickable Map"/>
-                </map>
+                </map></div>
+       
+        <div class="column">
+        <div class="slides">
         <h3>Picture Gallery</h3>
-        <!--<p><img id="berlinPics" src="images/barfieldtrip.jpg" alt="Slideshow of Berlin" title="Berlin"></p>
-        <p id="desc"></p>-->
-        <div id="gallery">
+        <p><img id="berlinPics" src="images/barfieldtrip.jpg" alt="Slideshow of Berlin" title="Berlin"></p>
+        <p id="desc">something</p>
+        <!--<div id="gallery">
                 <img src="images/barfieldtrip.jpg" title="Music Field Trip">
                 <img src="images/berlinart.jpg" title="Berlin Street Art Museum">
                 <img src="images/graffiti.jpg" title="Graffiti">
                 <img src="images/wall.jpg" title="The Berlin Wall">
-            </div>
+            </div>-->
           
 
-
+            </div>
         <audio controls autoplay>
-        <source src="heroes.mp3" type="audio/mp3">
-    </audio><br>
+        <source src="Heroes.mp3" type="audio/mp3">
+    </audio></div></div>
+    <br>
     <a href="sitemap.html">Site Map</a>
+</div>
 </body>
 </html>

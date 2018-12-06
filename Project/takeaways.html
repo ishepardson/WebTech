@@ -32,6 +32,8 @@
         text-align:center;
         background-color:black;
         color:red;
+        margin-top:0;
+        margin-bottom:0;
     }  
     span{
         color:yellow;
@@ -44,8 +46,47 @@
     }
     body{
         background-color: lightgoldenrodyellow;
+        margin:0;
+    }
+    div.body{
+        margin:15px;
     }
 </style>
+<script type="text/javascript">
+    
+    var animate, left=0, img=null;
+
+function init(){
+
+   img = document.getElementById('bug');
+   img.style.position= 'absolute';
+   img.style.top = '450px';
+   img.style.left = '-100px';
+   img.style.visibility='hidden';
+
+   animation();
+}
+
+function animation(){
+    left = parseInt(img.style.left, 10);
+
+    if (1000 >= left) {
+        img.style.left = (left + 5) + 'px';
+        img.style.visibility='visible';
+
+        animate = setTimeout(function(){animation();},20);
+
+    } else {
+        stop();
+    }
+}
+
+function stop(){
+   clearTimeout(animate);
+}
+
+window.onload = function() {init();}
+</script>
 </head>
 
 <body>
@@ -58,6 +99,7 @@
         <li><a href="contact.html">Contact</a></li>
         <li><a href="credits.html">Credits</a></li>
     </ul>
+    <div class="body">
     <h2>Summary</h2>
     <p>Berlin is an amazing city that I will definitely be returning to. The people there were extremely nice
         and respected and appreciated everyone for their differences and uniqueness. As a music lover, I was
@@ -87,5 +129,6 @@
         gave me.
     </p>
     <br>
-    <a href="sitemap.html">Site Map</a>
+    <img src="images/travelbug.png" id="bug" onload="function animation()" >
+    <a href="sitemap.html">Site Map</a></div>
 </body>
